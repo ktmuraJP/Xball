@@ -142,15 +142,11 @@ void initWindow(window_t *window_main,unsigned int palsize) //unsigned int layer
             );
     
     XMapWindow(display, window);
-    initKeyboard(window_main);
-    
-
     
     window_main->display = display;
     window_main->window = window;
     
     XGetWindowAttributes(window_main->display,window_main->window,&wa);
-    
 
     window_main->buffer = XCreatePixmap(window_main->display,
             window_main->window,wa.width,wa.height,wa.depth);
